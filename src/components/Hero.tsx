@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="animate-slide-up" style={{ animationDelay: '0.8s' }}>
               <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto lg:mx-0">
                 Passionate about creating innovative ML solutions and building scalable applications. 
-                Currently pursuing B.Tech in Computer Science with a 9.54 CGPA at SRM Institute of Science and Technology.
+                Currently pursuing B.Tech in Computer Science with a 9.58 CGPA at SRM Institute of Science and Technology.
               </p>
             </div>
 
