@@ -6,10 +6,10 @@ const Skills = () => {
       title: "Programming Languages",
       icon: <Code className="w-6 h-6" />,
       skills: [
-        { name: "Python", level: 95 },
-        { name: "JavaScript", level: 90 },
-        { name: "C/C++", level: 85 },
-        { name: "SQL", level: 88 }
+        { name: "Python", logo: "🐍" },
+        { name: "JavaScript", logo: "⚡" },
+        { name: "C/C++", logo: "🔧" },
+        { name: "SQL", logo: "🗃️" }
       ],
       gradient: "from-primary to-secondary"
     },
@@ -17,10 +17,10 @@ const Skills = () => {
       title: "Frameworks & Libraries",
       icon: <Wrench className="w-6 h-6" />,
       skills: [
-        { name: "Django & Flask", level: 92 },
-        { name: "React.js", level: 88 },
-        { name: "Node.js & Express", level: 85 },
-        { name: "Streamlit", level: 90 }
+        { name: "Django & Flask", logo: "🌐" },
+        { name: "React.js", logo: "⚛️" },
+        { name: "Node.js & Express", logo: "🟢" },
+        { name: "Streamlit", logo: "📊" }
       ],
       gradient: "from-secondary to-accent"
     },
@@ -28,10 +28,10 @@ const Skills = () => {
       title: "Database & Cloud",
       icon: <Database className="w-6 h-6" />,
       skills: [
-        { name: "PostgreSQL", level: 90 },
-        { name: "MongoDB", level: 85 },
-        { name: "MySQL", level: 88 },
-        { name: "AWS & GCP", level: 80 }
+        { name: "PostgreSQL", logo: "🐘" },
+        { name: "MongoDB", logo: "🍃" },
+        { name: "MySQL", logo: "🐬" },
+        { name: "AWS & GCP", logo: "☁️" }
       ],
       gradient: "from-accent to-primary"
     },
@@ -39,10 +39,10 @@ const Skills = () => {
       title: "AI & Machine Learning",
       icon: <Brain className="w-6 h-6" />,
       skills: [
-        { name: "Scikit-learn", level: 92 },
-        { name: "Hugging Face", level: 88 },
-        { name: "RAG & Semantic Search", level: 85 },
-        { name: "TensorFlow", level: 80 }
+        { name: "Scikit-learn", logo: "🧠" },
+        { name: "Hugging Face", logo: "🤗" },
+        { name: "RAG & Semantic Search", logo: "🔍" },
+        { name: "TensorFlow", logo: "🔥" }
       ],
       gradient: "from-primary to-accent"
     },
@@ -50,10 +50,10 @@ const Skills = () => {
       title: "Tools & Technologies",
       icon: <Cloud className="w-6 h-6" />,
       skills: [
-        { name: "Git/GitHub", level: 95 },
-        { name: "Docker", level: 75 },
-        { name: "REST APIs", level: 90 },
-        { name: "Figma", level: 85 }
+        { name: "Git/GitHub", logo: "🐙" },
+        { name: "Docker", logo: "🐳" },
+        { name: "REST APIs", logo: "🔌" },
+        { name: "Figma", logo: "🎨" }
       ],
       gradient: "from-secondary to-primary"
     },
@@ -61,10 +61,10 @@ const Skills = () => {
       title: "Soft Skills",
       icon: <Users className="w-6 h-6" />,
       skills: [
-        { name: "Team Leadership", level: 95 },
-        { name: "Problem Solving", level: 92 },
-        { name: "Public Speaking", level: 88 },
-        { name: "Project Management", level: 90 }
+        { name: "Team Leadership", logo: "👥" },
+        { name: "Problem Solving", logo: "💡" },
+        { name: "Public Speaking", logo: "🎤" },
+        { name: "Project Management", logo: "📋" }
       ],
       gradient: "from-accent to-secondary"
     }
@@ -118,8 +118,8 @@ const Skills = () => {
                   >
                     <div className="bg-muted/30 hover:bg-primary/10 rounded-xl p-4 border border-muted hover:border-primary/40 transition-all duration-300 hover:shadow-card cursor-pointer animate-fade-in">
                       <div className="text-center">
-                        <div className={`text-2xl font-bold bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent mb-2 group-hover/skill:scale-110 transition-transform duration-300`}>
-                          {skill.level}%
+                        <div className="text-3xl mb-3 group-hover/skill:scale-125 transition-transform duration-300">
+                          {skill.logo}
                         </div>
                         <div className="text-sm text-muted-foreground group-hover/skill:text-foreground transition-colors font-medium">
                           {skill.name}
@@ -127,7 +127,7 @@ const Skills = () => {
                       </div>
                       
                       {/* Floating indicator */}
-                      <div className={`absolute -top-1 -right-1 w-3 h-3 rounded-full bg-gradient-to-r ${category.gradient} opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300 animate-pulse-glow`}></div>
+                      <div className={`absolute -top-1 -right-1 w-3 h-3 rounded-full bg-gradient-to-r ${category.gradient} opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300`}></div>
                     </div>
                   </div>
                 ))}
@@ -190,10 +190,10 @@ const Skills = () => {
           ].map((stat, index) => (
             <div key={index} className="text-center group animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="relative">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2 group-hover:scale-125 transition-all duration-500 animate-pulse-glow">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-all duration-300">
                   {stat.number}{stat.suffix}
                 </div>
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 blur-xl rounded-full transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 blur-xl rounded-full transition-all duration-300"></div>
               </div>
               <p className="text-muted-foreground font-medium group-hover:text-primary transition-colors duration-300">{stat.label}</p>
             </div>
